@@ -8,7 +8,6 @@ document.getElementById("searchBtn").addEventListener("click",function(){
         document.getElementById("noFoundPhoneError").style.display = "none";
         phoneDetails.textContent = "";
         searchResult.textContent = "";
-        document.getElementById("showAll").style.display = "none";
     }else{
         document.getElementById("loading").style.display = "block";
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchInputText}`
