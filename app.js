@@ -218,4 +218,4 @@ const sensorsDisplay = (singlePhoneData) => {
 }
 
 
-/*Code End*/
+/*Code End Bye Bye*/
