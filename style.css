@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(249,248,248);
+}
+.img-width{
+    width:150px;
+}
+
+.detail-img-width{
+    width:200px;
+}
+
+.height{
+    height:100px;
+}
+
+.font-weight{
+    font-weight: 500;
+}
+
+.none{
+    display: none;
+}
+
+.btn-degin{
+    width:250px;
+    padding:10px 0px;
+    border:none;
+    color:white;
+    background-color: rgb(25, 135, 84);
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top:48px;
+}
+
+.searchIputDegin{
+    width:50%;
+}
+
+@media (max-width: 576px) {
+    .searchIputDegin{
+        width:80%;
+    }
+    .gapConnectivity{
+        margin-bottom:16px;
+    }
+    .container-custom{
+        width:85%;
+    }
+}
