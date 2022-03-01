@@ -11,6 +11,8 @@ document.getElementById("searchBtn").addEventListener("click",function(){
     if(searchInputText == ""){
         document.getElementById("emptyStringError").style.display = "block";
         document.getElementById("noFoundPhoneError").style.display = "none";
+        // showAll button hide
+        document.getElementById("showAll").style.display = "none";
         phoneDetails.textContent = "";
         searchResult.textContent = "";
     }else{
@@ -40,6 +42,8 @@ const phoneDisplay = (searchPhones) => {
     if(phones.length == 0){
         document.getElementById("emptyStringError").style.display = "none";
         document.getElementById("noFoundPhoneError").style.display = "block";
+        // showAll button hide
+        document.getElementById("showAll").style.display = "none";
         // Phone-details empty
         phoneDetails.textContent = "";
         // SerchResult empty
