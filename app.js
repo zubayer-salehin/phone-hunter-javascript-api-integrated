@@ -50,6 +50,30 @@ const phoneDisplay = (searchPhones) => {
                         </div>`
         container.appendChild(div);
     });
+    
+    if(phones.length > 20){
+        document.getElementById("showAll").style.display = "block";
+        document.getElementById("showAll").addEventListener("click",function(){
+            container.textContent = "";
+        phones.forEach(singlePhone => {
+            let div = document.createElement("div");
+            div.classList.add("col");
+            div.innerHTML = `<div class="card">
+                                <h6 class="my-2 ms-3">Latest</h6> 
+                                <img src="${singlePhone.image}" class="img-width ms-5" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title">${singlePhone.brand}</h3>
+                                    <h5 class="card-title text-success">${singlePhone.phone_name}</h5>
+                                </div>
+                                <div class="ms-3 mb-3">
+                                <button onclick="phoneDetails('${singlePhone.slug}')" class="btn btn-success" type="button">Veiw Details</button>
+                                </div>
+                            </div>`
+            container.appendChild(div);
+        });
+        document.getElementById("showAll").style.display = "none";
+    })
+}
     document.getElementById("loading").style.display = "none";
 }
 
