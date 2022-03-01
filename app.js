@@ -55,13 +55,12 @@ const phoneDisplay = (searchPhones) => {
         let div = document.createElement("div");
         div.classList.add("col");
         div.innerHTML = `<div class="card">
-                            <h6 class="my-2 ms-3">Latest</h6> 
-                            <img src="${singlePhone.image}" class="img-width ms-5" alt="...">
-                            <div class="card-body">
-                                <h3 class="card-title">${singlePhone.brand}</h3>
-                                <h5 class="card-title text-success">${singlePhone.phone_name}</h5>
+                            <div class="mx-auto mt-3">
+                            <img src="${singlePhone.image}" class="img-width" alt="...">
                             </div>
-                            <div class="ms-3 mb-3">
+                                <h3 class="card-title mx-auto mt-3">${singlePhone.brand}</h3>
+                                <h5 class="card-title text-success mx-auto">${singlePhone.phone_name}</h5>
+                            <div class="mx-auto mt-1 mb-3">
                             <button onclick="phoneDetails('${singlePhone.slug}')" class="btn btn-success" type="button">Veiw Details</button>
                             </div>
                         </div>`
@@ -79,13 +78,12 @@ const phoneDisplay = (searchPhones) => {
             let div = document.createElement("div");
             div.classList.add("col");
             div.innerHTML = `<div class="card">
-                                <h6 class="my-2 ms-3">Latest</h6> 
-                                <img src="${singlePhone.image}" class="img-width ms-5" alt="...">
-                                <div class="card-body">
-                                    <h3 class="card-title">${singlePhone.brand}</h3>
-                                    <h5 class="card-title text-success">${singlePhone.phone_name}</h5>
+                                <div class="mx-auto mt-3">
+                                <img src="${singlePhone.image}" class="img-width" alt="...">
                                 </div>
-                                <div class="ms-3 mb-3">
+                                    <h3 class="card-title mx-auto mt-3">${singlePhone.brand}</h3>
+                                    <h5 class="card-title text-success mx-auto">${singlePhone.phone_name}</h5>
+                                <div class="mx-auto mt-1 mb-3">
                                 <button onclick="phoneDetails('${singlePhone.slug}')" class="btn btn-success" type="button">Veiw Details</button>
                                 </div>
                             </div>`
@@ -94,7 +92,7 @@ const phoneDisplay = (searchPhones) => {
         // showAll button hide
         document.getElementById("showAll").style.display = "none";
     })
-}
+  }
     // loading stop
     document.getElementById("loading").style.display = "none";
 }
@@ -113,10 +111,9 @@ const phoneDetailsDisplay = (singlePhoneData) => {
     let singlePhone = singlePhoneData.data;
     let phoneDetails = document.getElementById("phone-details");
     phoneDetails.innerHTML = `<div class="col-12 mt-5">
-                                <div class="card">
+                                <div class="card pt-3">
                                     <div class="d-flex justify-content-center">
                                         <div>
-                                        <h6 class="my-3">Latest</h6> 
                                         <img src="${singlePhone.image}" class="detail-img-width" alt="...">
                                         <h3 class="card-title mt-3 text-center">${singlePhone.brand}</h3>
                                             <h5 class="card-title text-success text-center">${singlePhone.name}</h5>    
@@ -166,19 +163,19 @@ const phoneDetailsDisplay = (singlePhoneData) => {
                                                 </tr>
                                                 <tr>
                                                     <td>Display Size</th>
-                                                    <td colspan="3">${singlePhone.mainFeatures.displaySize}</td>
+                                                    <td colspan="3">${singlePhone.mainFeatures.displaySize ? singlePhone.mainFeatures.displaySize : "No Date Available"}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Chipset</th>
-                                                    <td colspan="3">${singlePhone.mainFeatures.chipSet}</td>
+                                                    <td colspan="3">${singlePhone.mainFeatures.chipSet ? singlePhone.mainFeatures.chipSet : "No Data Available"}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Memory</th>
-                                                    <td colspan="3">${singlePhone.mainFeatures.memory}</td>
+                                                    <td colspan="3">${singlePhone.mainFeatures.memory ? singlePhone.mainFeatures.memory : "No Data Available"}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Storage</th>
-                                                    <td colspan="3">${singlePhone.mainFeatures.storage}</td>
+                                                    <td colspan="3">${singlePhone.mainFeatures.storage ? singlePhone.mainFeatures.storage: "No Data Available"}</td>
                                                 </tr>
                                             </tbody>
                                           </table>
