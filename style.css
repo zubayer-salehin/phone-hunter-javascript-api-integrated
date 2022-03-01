@@ -1,3 +1,4 @@
+/* custom css start */
 body{
     background-color: rgb(249,248,248);
 }
@@ -35,7 +36,9 @@ body{
 .searchIputDegin{
     width:50%;
 }
+/* custom css end */
 
+/* media query start */
 @media (max-width: 576px) {
     .searchIputDegin{
         width:80%;
@@ -47,3 +50,4 @@ body{
         width:85%;
     }
 }
+/* media query end */
